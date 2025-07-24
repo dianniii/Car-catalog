@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Car Catalog
 
-## Getting Started
+Приложение на **Next.js** для просмотра автомобилей и их детальной информации по карточкам (name, model, year, price)ю Данные, отображаемые на сайте приходят с API [API_task](https://ofc-test-01.tspb.su/test-task/vehicles). 
 
-First, run the development server:
+Интерфейс построен на React, TypeScript, Tailwind-CSS, Shadcn/ui и react-leaflet.
+
+Ознакомиться с сайтом можно по ссылке ниже:
+
+
+## ✨ Функционал приложения
+| Экран | Возможности |
+|-------|-------------|
+| **Главная** `/` | *Серверный рендерингд. Возможность поиска по name, model, year, price (поиск отобразится на карте и выведет нужную машину). Карточки включают в себя краткую информацию об автомобиле, возможность редактирование машины (по полю name, model и price), удаление машины. Карта отображает машины по latitude и longitude. Реализована сортировка по году и прайсу (возрастание, убывание).|
+| **404** | Кастомный `not-found.tsx`. |
+| **Loading состояния** |  Sceleton загрузки до того, как данные появятся на странице + анимация.|
+
+
+## 🛠 Стек
+ **Next.js** SSR / ISR, Server Components, файловая марщрутизация<br>
+ **TypeScript** типизация данных, пришедших с сервера<br>
+ **Tailwind CSS** стилизация компонентов<br>
+ **Shadcn** готовые компоненты (Card, Button, Skeleton, Input)<br>
+ **react-leaflet** react-компоненты для использования карт
+
+## Необходимо:
+
+- **Node.js** - 18 и выше
+- **npm**
+
+## Чтобы запустить проект: 
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install - # Установка зависимостей
+
+npm run dev - # Запуск режима разработки
 ```
+## Структура проекта
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+├─ api/          # включает типы данных и API функции
+├─ app/          # маршруты и страницы приложения
+├─ components/   # переиспользуемые React-компоненты
+├─ hooks/        # содержит кастомные хуки useSearchCars и useCars  
+├─ lib/          # общие утилиты
+```
