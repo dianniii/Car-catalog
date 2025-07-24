@@ -1,6 +1,6 @@
 # Car Catalog
 
-Приложение на **Next.js** для просмотра автомобилей и их детальной информации по карточкам (name, model, year, price)ю Данные, отображаемые на сайте приходят с [API_task](https://ofc-test-01.tspb.su/test-task/vehicles). 
+Приложение на **Next.js** для просмотра автомобилей и их детальной информации по карточкам (name, model, year, price). Данные, отображаемые на сайте приходят с [API_task](https://ofc-test-01.tspb.su/test-task/vehicles). 
 
 Интерфейс построен на React, TypeScript, Tailwind-CSS, Shadcn/ui и react-leaflet.
 
