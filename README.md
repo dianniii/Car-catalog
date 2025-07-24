@@ -5,6 +5,7 @@
 Интерфейс построен на React, TypeScript, Tailwind-CSS, Shadcn/ui и react-leaflet.
 
 Ознакомиться с сайтом можно по ссылке ниже:
+<https://car-catalog-psi.vercel.app/>
 
 
 ## ✨ Функционал приложения
